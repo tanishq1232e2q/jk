@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XLGS8NK8N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6XLGS8NK8N');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to create simple form validation using Javascript</title>
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <meta name="description" content="In this article you will learn some tips and tricks so that you can validate your javascript form in just few minutes ">
+    <meta name="keywords" content="How to create simple form validation using Javascript,form validation in javascript,
+    javascript form validation,
+    validation in javascript,form validation using javascript,
+    js validation,form validation using javascript,
+    password validation js,
+    javascript submit form,
+    js form validation,form validation js,jquery validation,javascript validation for email,js validation for email">
+    <meta name="author" content="Tanishq Palkhe">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/c.css">
+    <link rel="stylesheet" href="/path/to/styles/default.min.css">
+    <script src="/path/to/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <style>
+        .nava {
+            margin-top: 0px;
+        }
+
+
+        .nava .main .open {
+            display: none;
+            position: absolute;
+            top: 7rem;
+            cursor: pointer;
+            background-color: white;
+            width: 15%;
+            box-shadow: 2px 3px 6px black;
+            z-index: 100;
+
+            /* left: -3rem; */
+
+        }
+
+        footer {
+            height: fit-content;
+            margin-top: 4rem;
+        }
+
+        .scrolltop-style {
+            position: fixed;
+            right: 5%;
+            bottom: 3%;
+        }
+
+        .scroll-top {
+            height: 5rem;
+            width: 5rem;
+            background-color: #8490ff;
+            display: inline-block;
+            padding: 1.4rem 1.8rem;
+            color: var(--heading);
+            cursor: pointer;
+            border: 2px solid var(--helper);
+            border-radius: 23px;
+        }
+
+
+
+        #mo ul {
+            display: none;
+            position: absolute;
+            top: 7rem;
+            cursor: pointer;
+            background-color: white;
+            width: 12%;
+            box-shadow: 2px 3px 2px black;
+            z-index: 100;
+        }
+
+        .imgcontact {
+            height: 25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("/images/technology-g0c6ae9fdb_1920_.jpg");
+            background-size: cover;
+            border-radius: 12px;
+            margin: 4rem 0rem;
+        }
+
+        .sid {
+            margin: 3rem 6rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+            color: aliceblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            margin: 0rem 3rem;
+        }
+
+        .sit {
+            margin: 3rem 17rem;
+        }
+
+        .contentpost h2 {
+            margin-top: 3rem;
+            text-align: left;
+            margin-left: 0px;
+            margin-bottom: 2rem;
+        }
+
+        .contentpost ol li {
+            font-size: 2rem;
+            margin: 2rem 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        .contentpost h4 {
+            font-size: 2rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .contentpost p {
+            font-size: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        .contentpost .aboutus {
+            margin: 4rem 0rem;
+
+            padding: 2rem;
+            font-size: 1.4rem;
+            /* border: 2px solid black; */
+
+            /* height: 30%; */
+        }
+
+        .contentpost .aboutus img {
+            width: 10rem;
+            height: 10rem;
+            display: block;
+            margin: auto;
+            border-radius: 8rem;
+            margin-bottom: -5rem;
+
+        }
+
+        .contentpost .aboutus .aboutconta h6 {
+            font-size: 1.2rem;
+            width: 100%;
+            display: block;
+            margin: auto;
+            text-align: center;
+            margin: 1.6rem 0rem;
+
+        }
+
+        .contentpost .aboutconta {
+            background-color: #EFF0F4;
+            border-radius: 1.2rem;
+            padding-top: 9rem;
+            padding: 5rem;
+        }
+
+        .contentpost .aboutconta p {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        #join {
+            width: 100%;
+            border-radius: 2rem;
+        }
+
+        .next {
+            display: flex;
+            gap: 23rem;
+            /* margin-top: 1rem; */
+        }
+
+        .next p {
+            font-size: 1.2rem;
+        }
+
+        .popularpost img {
+            width: 100%;
+            height: 20rem;
+            gap: 5rem;
+        }
+
+        #related {
+            display: block;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .comment {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment h4 {
+            font-size: 2rem;
+            margin: 2rem 0rem;
+        }
+
+        .boxa {
+            width: 100%;
+            height: 8rem;
+            border: 2px solid black;
+            margin-top: 4rem;
+            display: none;
+            font-size: 1.4rem;
+            border-radius: 1.4rem;
+            padding: 1rem;
+            overflow-y: scroll;
+
+        }
+
+        .boxa::before {
+            content: "UNKNOWN: ";
+            padding: 0.6rem;
+
+        }
+
+        .sih {
+            margin: 3rem 2rem;
+        }
+
+
+        .comment #commentbelow {
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 1rem;
+            padding: 0.7rem;
+            font-size: 1.3rem;
+            height: 50%;
+        }
+
+        .comment .btn {
+            margin-left: 2px;
+        }
+
+        .comment .btn1 {
+            width: 6rem;
+            border-radius: 1rem;
+            height: 3rem;
+            margin: 1rem 0rem;
+            background-color: violet;
+            color: #EFF0F4;
+
+        }
+
+        .language-html {
+            font-size: 1.4rem;
+        }
+        .colot{
+            color: #8490ff;
+        }
+
+
+
+
+        @media(max-width:876px) {
+            #boss {
+                /* position: relative; */
+                top: -9rem;
+            }
+
+            .grida {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .sit {
+                margin: 3rem 2rem;
+            }
+            .language-html{
+                font-size: 1rem;
+            }
+        }
+
+        @media(max-width:486px) {
+            .grida {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .popularpost img {
+                height: 26rem;
+            }
+            .language-html{
+                font-size: 0.8rem;
+            }
+            .sid{
+                margin: 3rem 2rem;
+            }
+            .next{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .contentpost .aboutconta{
+                padding:4rem ;
+            }
+            .imgcontact h3{
+                margin: 0rem;
+            }
+            .comment .btn1{
+        width: 8rem;
+
+    }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header ">
+
+
+        <nav class="nava">
+            <div class="navbtn">
+
+                <i class="fa-solid fa-3x fa-bars opene " onclick="myfun()"></i>
+                <i class="fa-solid fa-3x fa-close close"></i>
+            </div>
+            <img id="image" src="/images/pngkey.com-web-development-images-png-2496182.png" alt="" srcset="">
+
+            <ul id="boss">
+                <li class="main " id="homa" onclick="ho()">Home<span><i id="right1"
+                            class="fa-solid fa-angle-right"></i></span>
+                    <ul class="open">
+                        <li><a href="/index.html#popular">Popular Posts</a></li>
+                        <li class="ok"><a href="/index.html#follow">Follow us</a></li>
+                        <li class="ok"><a href="/index.html#technology">Technology</a></li>
+                        <li class="ok"><a href="/index.html#slidesection">Featured Posts</a></li>
+                        <li class="cota" onclick="op()">Categories +
+                            <ul class="oye">
+                                <li><a href="/post3.html">Web development</a></li>
+                                <li><a href="/post6.html">SEO</a></li>
+                                <li><a href="/host.html">Hosting</a></li>
+                                <!-- <li><a href="">Hosting</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main" id="mo">More<span><i id="right2" class="fa-solid fa-angle-right"></i></span>
+                    <ul>
+                        <li><a href="/ht.html">HTML</a></li>
+                        <li><a href="/css.html">CSS</a></li>
+                        <li><a href="/js.html">Javascript</a></li>
+                       
+                    </ul>
+                </li>
+                <li class="main"> <a href="/contact.html">Contact us</a> <span class="use1"><i id="right3"
+                    class="fa-solid fa-angle-right"></i></span></li>
+        <li class="main"> <a href="/about.html">About us</a> <span class="use1"><i id="right4"
+                    class="fa-solid fa-angle-right"></i></span></li>
+        <li class="main"> <a href="/privacypolicy.html">Privacy Policy</a> <span class="use1"><i id="right5"
+                    class="fa-solid fa-angle-right"></i></span></li>
+            </ul>
+            <div class="socialicons">
+                <a href="https://m.facebook.com/tanishq.palkhe.14"><i class="fa-brands fa-2x fa-2x fa-facebook"></i></a>
+                <a href="https://twitter.com/Tanishq3657"><i class="fa-brands fa-2x fa-2x fa-twitter"></i></a>
+                <a href="https://instagram.com/tanishqpalkhe007"><i class="fa-brands  fa-2x fa-2x fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/tanishq-palkhe-5a52a6217"><i class="fa-brands fa-2x fa-linkedin"></i></a>
+            </div>
+
+
+
+        </nav>
+    </section>
+
+
+    <section class="imgcontact sid">
+        <h3>How to create simple form validation using Javascript</h3>
+    </section>
+
+    <section class="contentpost sit">
+        <div>
+            <p>
+                Before submitting a form there is need to validate it by spotting errors to aviod the submission of incorrect information
+                entered by the user. So with the help of Javascript we can show error to a user if he/she entered the wrong information while submitting 
+                a form and also display a message when the form is successfully submitted. 
+
+            </p>
+        </div>
+        <div>
+            <h2></h2>
+            <p>So here i create a simple form validation using Javascript by selecting the elements of the form such as 
+                password,name,email. And made two functions for success and error, you can also add buttons corresponding to each success and error.
+                Here is the code through which you can understand it.
+            <pre><code class="language-html">
+const username = document.querySelector(".username")
+const email = document.querySelector(".email")
+const password = document.querySelector(".password")
+const cpassword = document.querySelector(".cpassword")
+const form = document.querySelector("#form")
+
+// console.log(opened);
+
+
+// console.log(username);
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    if (username.value == "") {
+            i=0
+        seterror(username, "username cannot be empty")
+    }
+    else {
+            i=0
+        forsuccess(username)
+    }
+    if (email.value == "") {
+        i=1
+        seterror(email, "email cannot be empty")
+    }
+    else {
+        i=1
+        forsuccess(email)
+    }
+    if (password.value == "") {
+        i=2
+        seterror(password, "Please enter your password")
+    }
+    else {
+        i=2
+        forsuccess(password)
+        
+    }
+    if (cpassword.value == "") {
+        i=3
+        seterror(cpassword, "enter your confirm password")
+    }
+    else if(cpassword.value!=password.value){
+        i=3
+        seterror(cpassword, "Please enter your correct password")
+    }
+    else {
+        i=3
+        forsuccess(cpassword)
+    }
+
+})
+
+function forsuccess(argument) {
+    argument.classList.add("success")
+    const messagea = document.querySelectorAll(".message")
+    messagea[i].style.visibility = "hidden"
+        
+}
+function seterror(input, message) {
+    const messagea = document.querySelectorAll(".message")
+    console.log(messagea);
+    messagea[i].style.visibility = "visible"
+    messagea[i].innerHTML = message
+    input.classList.add("error")
+    
+}
+                
+                </code></pre>
+
+
+
+            </p>
+            <p></p>
+        </div>
+        
+        <section id="join">
+            <h2>Join us now</h2>
+            <button class="btn"> <a href="/login.html">Join us</a> </button>
+
+        </section>
+        <section class="aboutus">
+            <img src="/images/m.jpeg" alt="">
+            <div class="aboutconta">
+                <h6>Written by Tanishq Palkhe</h6>
+                <p>Hi i am Tanishq Palkhe a web developer, blogger learn various practical applications of HTML, css and
+                    Javascript with me in the field of web development.In today's generation there is a need to learn
+                    skills that not only help you to get you a job but also encourage you to built your own startups.So
+                    enlight your knowledge, work hard and built a successful person in life.
+                </p>
+            </div>
+        </section>
+        <section class="next">
+            <div class="coprevious">
+                <!-- <img src="/images/bitcoin-4253759_1920.jpg" alt=""> -->
+                <h4> <a href="/post4.html">PRIVIOUS</a> </h4>
+                <p>How to make animated game using Javascript</p>
+
+
+            </div>
+            <div class="conext">
+                <h4> <a href="/post6.html">NEXT</a> </h4>
+                <p>Everything you need to know about seo and how it works</p>
+            </div>
+        </section>
+    </section>
+
+    <h2 id="related">Related Posts</h2>
+    <section class="popularpost  grid2 sit">
+        <div>
+            <a href="/post2.html">
+
+                <img src="/images/web-designer-g675f53b6b_1920.jpg" alt="">
+                <h4>What is full Stack web Development and how to learn it</h4>
+                <p>Full Stack means the skills and technology required to complete a project or a website.In web development
+                    full stack refers to
+                    acquire all technology which helps to built a complete platform(website) including both frontend and
+                    backend.</p>
+            </a>
+        </div>
+        <div>
+            <a href="/post5.html">
+
+                <img src="/images/form.png" alt="">
+                <h4>How to create simple form validation using Javascript</h4>
+                <p>Before submitting a form there is need to validate it by spotting errors to aviod the submission of incorrect information
+                    entered by the user. So with the help of Javascript we can show error to a user if he/she entered the wrong information while submitting 
+                    a form and also display a message when the form is successfully submitted.</p>
+            </a>
+        </div>
+        <div>
+            <a href="post4.html">
+
+                <img src="/images/Gaming time.png" alt="">
+                <h4>How to make animated game using Javascript</h4>
+                <p>There are various events in Javascript which are used for different purposes such as keyboard events,
+                    mouse events, form events, CSS events etc,
+                    these events are used to make websites interactive when a user performs any action.</p>
+            </a>
+        </div>
+        <div>
+            <a href="/post3.html">
+
+                <img src="/images/web technology (1).png" alt="">
+                <h4>How web technology works in real world</h4>
+                <p>Web technology refers to the way through which different devices communicate with each other across the
+                    world using
+                    web languages mainly HTML,CSS and Javascript. These three languages and there frameworks are the
+                    foundation of web  </p>
+            </a>
+        </div>
+    </section>
+    <section class="comment sit">
+
+        <h4>Leave a reply</h4>
+
+        <textarea name="comment" id="commentbelow" cols="30" rows="6" placeholder="Enter your comment"></textarea>
+        <button class="btn1" onclick="show()">Comment</button>
+        <div class="boxa">
+
+        </div>
+
+
+
+    </section>
+    <footer>
+        <div class="footer side grida">
+            <div class="carr">
+                <h6 id="lion">Featured posts</h6>
+
+                <div>
+
+                    <img src="/images/Untitled design (21).png" alt="">
+                    <a href="/post10.html">
+                        <h4>Waht is an API and how it works?</h4>
+                    </a>
+
+                </div>
+                <div>
+                    <img src="/images/software-developer-g857690d53_1920.jpg" alt="">
+                    <a href="/post1.html">
+                        <h4>Top 3 programming languages to learn for web Development in 2022</h4>
+                    </a>
+
+                </div>
+                <div>
+                    <img src="/images/stephen-phillips-hostreviews-co-uk-2kH-6T6x_0I-unsplash.jpg" alt="">
+                    <a href="/host.html">
+                        <h4>Top 5 free sources to host your website</h4>
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="links">
+                <h6>Useful links</h6>
+                <a href="/index.html">
+                    <li class="used">Home</li>
+                </a>
+                <a href="/about.html">
+                    <li class="used">About us</li>
+                </a>
+                <a href="/post6.html">
+                    <li class="used">SEO</li>
+                </a>
+                <a href="https://github.com/TanishqPalkhe">
+                    <li class="used">github</li>
+                </a>
+               
+                <a href="/ht.html">
+                    <li class="used">HTML</li>
+                </a>
+                <a href="/css.html">
+                    <li class="used">CSS</li>
+                </a>
+                <a href="/js.html">
+                    <li class="used">Javascript</li>
+                </a>
+                <a href="/contact.html">
+                    <li class="used">Contact</li>
+                </a>
+                <!-- <a href=""> <li class="used">Javascript</li></a> -->
+            </div>
+          
+            <section class="insta">
+                <h6>Social links</h6>
+                <div class="ic">
+                    <a href="https://m.facebook.com/tanishq.palkhe.14"><i class="fa-brands fa-2x fa-3x fa-facebook"></i></a>
+                    <a href="https://twitter.com/Tanishq3657"><i class="fa-brands fa-2x fa-3x fa-twitter"></i></a>
+                    <a href="https://instagram.com/tanishqpalkhe007"><i class="fa-brands  fa-2x fa-3x fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/tanishq-palkhe-5a52a6217"><i class="fa-brands fa-3x fa-linkedin"></i></a>
+                </div>
+
+               
+                <div class="github">
+                    <!-- <i class="fa-brands fa-5x fa-github"></i>
+                <p>To get our project follow us on github</p> -->
+                    <button class="btn">
+                        <a href="">Follow</a></button>
+                </div>
+            </section>
+            <div class="row">
+
+                <section class="abou">
+                    <h4>About us</h4>
+                    <p>Hi i am Tanishq Palkhe a web developer, blogger this website is all about web development and its
+                        tips and tricks
+                        and how you can made a carrer in it.So join us in our journey and enhance your skills and
+                        promote startups and entrepreneurship in India.
+                    </p>
+
+                </section>
+                <section class="gr">
+                    <h4 id="foot">webtechnopro.in @copyright all rights reserved</h4>
+                    <div class="last">
+
+                        <a href="/index.html">
+                            <li class="used">Home</li>
+                        </a>
+                        <a href="/about.html">
+                            <li class="used">About us</li>
+                        </a>
+                        <a href="/contact.html">
+                            <li class="used">Contact</li>
+                        </a>
+                        <a href="/ht.html">
+                            <li class="used">More</li>
+                        </a>
+                        <a href="/privacypolicy.html">
+                            <li class="used">Privacy Policy</li>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+
+
+
+        </div>
+
+    </footer>
+
+    <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
+    <script>
+
+        boss = document.querySelector("#boss")
+        openaa = document.querySelector(".opene")
+        header = document.querySelector(".header")
+        // console.log(openaa);
+
+
+        function myfun() {
+
+            if (header.classList.toggle("hnav")) {
+                boss.style.display = "block"
+            }
+
+            else {
+                boss.style.display = "none"
+            }
+
+
+
+        }
+        function show() {
+            commentbelow = document.querySelector("#commentbelow")
+            console.log(commentbelow.value);
+            boxa = document.querySelector(".boxa")
+            console.log(boxa);
+            boxa.style.display = "block"
+            if (boxa.innerText = commentbelow.value) {
+                commentbelow.value = ""
+            }
+            else if (commentbelow.value == "") {
+                boxa.style.display = "none"
+            }
+
+
+
+        }
+
+        const herosection = document.querySelector(".header")
+
+        const footele = document.querySelector(".footer")
+        const scrollTotop = document.createElement("div")
+        scrollTotop.classList.add("scrolltop-style")
+
+
+        scrollTotop.innerHTML = `<i class="fa-solid fa-2x fa-arrow-up-long scroll-top"></i>`
+        footele.after(scrollTotop)
+
+        const scrolltop = () => {
+            herosection.scrollIntoView({ behavior: "smooth" })
+        }
+        scrollTotop.addEventListener("click", scrolltop)
+
+    </script>
+
+</body>
+
+</html>

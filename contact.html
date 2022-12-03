@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XLGS8NK8N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6XLGS8NK8N');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/c.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/index.js"></script>
+    <style>
+        .nava {
+            margin-top: 0px;
+        }
+
+        .nava .main .open {
+            display: none;
+            position: absolute;
+            top: 7rem;
+            cursor: pointer;
+            background-color: white;
+            width: 15%;
+            box-shadow: 2px 3px 6px black;
+            z-index: 100;
+
+            /* left: -3rem; */
+
+        }
+
+        footer {
+            height: fit-content;
+            margin-top: 4rem;
+        }
+
+        .scrolltop-style {
+            position: fixed;
+            right: 5%;
+            bottom: 3%;
+        }
+
+        .scroll-top {
+            height: 5rem;
+            width: 5rem;
+            background-color: #8490ff;
+            display: inline-block;
+            padding: 1.4rem 1.8rem;
+            color: var(--heading);
+            cursor: pointer;
+            border: 2px solid var(--helper);
+            border-radius: 23px;
+        }
+
+
+
+        #mo ul {
+            display: none;
+            position: absolute;
+            top: 7rem;
+            cursor: pointer;
+            background-color: white;
+            width: 12%;
+            box-shadow: 2px 3px 2px black;
+            z-index: 100;
+        }
+
+        .imgcontact {
+            height: 23rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("/images/web-1012467_1920.jpg");
+            background-size: cover;
+            border-radius: 12px;
+            margin: 4rem 0rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+            color: aliceblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .query {
+            height: 12rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .query h4 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .query p {
+            margin-bottom: 1.3rem;
+        }
+
+        .query hr {
+            width: 10%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .contactform {
+            /* height: 12rem; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 12rem; */
+
+
+        }
+
+
+        .contactform input[name="phone"] {
+            width: 100%;
+
+        }
+
+        .contactform input[name="email"] {
+            width: 100%;
+
+        }
+
+        .contactform input[name="submit"] {
+
+            display: block;
+            margin: auto;
+            /* text-align: center; */
+            padding: initial;
+            background-color: aquamarine;
+           
+
+
+        }
+
+        .contactform input {
+            padding: 1.4rem;
+            margin: 1.4rem 0rem;
+            gap: 2rem;
+            border-radius: 12px;
+            border: 2px solid black;
+         
+        }
+
+        .for {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            align-items: baseline;
+            grid-gap: 2rem
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .for input {
+            width: 100%;
+        }
+
+        .phona {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            grid-gap: 2rem;
+            justify-content: center;
+            align-items: baseline;
+
+
+        }
+
+        .ema {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            grid-gap: 2rem;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        .contactform .for .hode {
+            margin-bottom: -4rem;
+        }
+
+        .sid {
+            margin: 3rem 4rem;
+        }
+       
+        @media(max-width:876px) {
+            #boss {
+                /* position: relative; */
+                top: -9rem;
+            }
+
+            .grida {
+                grid-template-columns: repeat(1, 1fr);
+            }
+           
+        }
+
+        @media(max-width:486px) {
+            .grida {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .footer{
+                height: 156vh;
+            }
+        }
+        @media(max-width:418px) {
+            .carr img {
+                width: 32%;
+                height: 72%;
+                margin: 1rem 0rem;
+            }
+            .carr{
+                margin: 0rem 4rem;
+            }
+            #foot{
+                position: absolute;
+            }
+        
+          
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="header ">
+
+
+        <nav class="nava">
+            <div class="navbtn">
+
+                <i class="fa-solid fa-3x fa-bars opene " onclick="myfun()"></i>
+                <i class="fa-solid fa-3x fa-close close"></i>
+            </div>
+            <img id="image" src="/images/pngkey.com-web-development-images-png-2496182.png" alt="" srcset="">
+
+            <ul id="boss">
+                <li class="main " id="homa" onclick="ho()">Home<span><i id="right1"
+                            class="fa-solid fa-angle-right"></i></span>
+                    <ul class="open">
+                        <li><a href="/index.html#popular">Popular Posts</a></li>
+                        <li class="ok"><a href="/index.html#follow">Follow us</a></li>
+                        <li class="ok"><a href="/index.html#technology">Technology</a></li>
+                        <li class="ok"><a href="/index.html#slidesection">Featured Posts</a></li>
+                        <li class="cota" onclick="op()">Categories +
+                            <ul class="oye">
+                                <li><a href="/post3.html">Web development</a></li>
+                                <li><a href="/post6.html">SEO</a></li>
+                                <li><a href="/host.html">Hosting</a></li>
+                                <!-- <li><a href="">Hosting</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main" id="mo">More<span><i id="right2" class="fa-solid fa-angle-right"></i></span>
+                    <ul>
+                        <li><a href="/ht.html">HTML</a></li>
+                        <li><a href="/css.html">CSS</a></li>
+                        <li><a href="/js.html">Javascript</a></li>
+
+                    </ul>
+                </li>
+                <li class="main"> <a href="/contact.html">Contact us</a> <span class="use1"><i id="right3"
+                            class="fa-solid fa-angle-right"></i></span></li>
+                <li class="main"> <a href="/about.html">About us</a> <span class="use1"><i id="right4"
+                            class="fa-solid fa-angle-right"></i></span></li>
+                <li class="main"> <a href="/privacypolicy.html">Privacy Policy</a> <span class="use1"><i id="right5"
+                            class="fa-solid fa-angle-right"></i></span></li>
+            </ul>
+            <div class="socialicons">
+                <a href="https://m.facebook.com/tanishq.palkhe.14"><i class="fa-brands fa-2x fa-2x fa-facebook"></i></a>
+                <a href="https://twitter.com/Tanishq3657"><i class="fa-brands fa-2x fa-2x fa-twitter"></i></a>
+                <a href="https://instagram.com/tanishqpalkhe007"><i class="fa-brands  fa-2x fa-2x fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/tanishq-palkhe-5a52a6217"><i
+                        class="fa-brands fa-2x fa-linkedin"></i></a>
+            </div>
+
+
+
+        </nav>
+    </section>
+    <section class="imgcontact sid">
+        <h3>Contact us</h3>
+    </section>
+
+    <section class="query sid">
+        <hr>
+        <h4>How can we help you</h4>
+        <p>If you have any query regarding our services please use our contact form to contact</p>
+        <hr>
+    </section>
+
+    <section class="contactform sid">
+        <form action="/index.html" id="form" onsubmit="yo()" name="myform" method="dialog">
+            <div class="for">
+                <i class="fa-solid fa-3x fa-user  hode"></i>
+
+                <input type="text" id="name1" placeholder="First name" name="name1">
+                <input type="text" id="name2" placeholder="Last name" name="name2">
+            </div>
+            <div class="phona">
+                <i class="fa-solid fa-3x fa-phone hode"></i>
+                <input type="number" id="phone" placeholder="Enter your number" name="phone">
+            </div>
+            <div class="ema">
+                <i class="fa-solid fa-3x fa-envelope hode"></i>
+                <input type="email" id="email" placeholder="Enter your email" name="email">
+
+            </div>
+            <input type="submit" name="submit">
+
+        </form>
+    </section>
+
+  
+
+
+
+    <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="/form.js"></script>
+
+    <script>
+        boss = document.querySelector("#boss")
+        openaa = document.querySelector(".opene")
+        header = document.querySelector(".header")
+        console.log(openaa);
+
+        function myfun() {
+
+            if (header.classList.toggle("hnav")) {
+                boss.style.display = "block"
+            }
+
+            else {
+                boss.style.display = "none"
+            }
+
+
+
+        }
+        function yo() {
+            let act = document.forms["myform"]["name1"]
+            console.log(act.value);
+            // let act1 = document.forms["myform"]["address"]
+            let act2 = document.querySelector("#phone")
+            let act3 = document.forms["myform"]["email"]
+            let act4 = document.forms["myform"]["name2"]
+
+            if (act.value == "" || act2.value == "" || act3.value == "" || act4.value == "") {
+                swal("Please enter your details completely")
+
+            }
+            else if (act2.value.length != 10) {
+                swal("Phone number must be 10 characters")
+
+            }
+            else if (act.value == act4.value) {
+                swal("Enter your last name correctly")
+
+            }
+            // else if(act2.toString().length<10){
+            //     swal("Phone number must be 10 characters")
+
+            // }
+            else {
+                swal("Good", "your form has been submitted", "success")
+                setTimeout(() => {
+
+                    window.location.reload()
+                }, 2000);
+
+            }
+            // document.getElementById("form").reset();
+        }
+
+
+      
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

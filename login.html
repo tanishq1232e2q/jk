@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XLGS8NK8N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6XLGS8NK8N');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/c.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <style>
+        .nava {
+            margin-top: 0px;
+        }
+
+        .nava .main .open {
+            display: none;
+            position: absolute;
+            top: 7rem;
+            cursor: pointer;
+            background-color: white;
+            width: 15%;
+            box-shadow: 2px 3px 6px black;
+            z-index: 100;
+
+            /* left: -3rem; */
+
+        }
+
+        footer {
+            height: fit-content;
+            margin-top: 4rem;
+        }
+
+        .scrolltop-style {
+            position: fixed;
+            right: 5%;
+            bottom: 3%;
+        }
+
+        .scroll-top {
+            height: 5rem;
+            width: 5rem;
+            background-color: #8490ff;
+            display: inline-block;
+            padding: 1.4rem 1.8rem;
+            color: var(--heading);
+            cursor: pointer;
+            border: 2px solid var(--helper);
+            border-radius: 23px;
+        }
+
+
+
+        #mo ul {
+            display: none;
+            position: absolute;
+            top: 7rem;
+            cursor: pointer;
+            background-color: white;
+            width: 12%;
+            box-shadow: 2px 3px 2px black;
+            z-index: 100;
+        }
+
+        .imgcontact {
+            height: 23rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("/images/web-1012467_1920.jpg");
+            background-size: cover;
+            border-radius: 12px;
+            margin: 4rem 0rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+            color: aliceblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .query {
+            height: 12rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .query h4 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .query p {
+            margin-bottom: 1.3rem;
+        }
+
+        .query hr {
+            width: 10%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .contactform {
+            /* height: 12rem; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin-top: 12rem; */
+
+
+        }
+
+
+        .contactform input[name="phone"] {
+            width: 100%;
+
+        }
+
+        .contactform input[name="email"] {
+            width: 100%;
+
+        }
+
+        .contactform input[name="submit"] {
+
+            display: block;
+            margin: auto;
+            text-align: center;
+            background-color: aquamarine;
+
+
+        }
+
+        .contactform input {
+            padding: 1.4rem;
+            margin: 1.4rem 0rem;
+            gap: 2rem;
+            border-radius: 12px;
+        }
+
+        .for {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            align-items: baseline;
+            grid-gap: 2rem
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .for input {
+            width: 100%;
+        }
+
+        .phona {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            grid-gap: 2rem;
+            justify-content: center;
+            align-items: baseline;
+
+
+        }
+
+        .ema {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            grid-gap: 2rem;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        .contactform .for .hode {
+            margin-bottom: -4rem;
+        }
+
+
+        .sid {
+            margin: 3rem 4rem;
+        }
+
+        /* form */
+        /*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);*/
+        *:focus {
+            outline: none;
+        }
+
+        .formal {
+            background-image: url("/images/html5-386614_1920.jpg");
+            height: 34rem;
+        }
+
+
+
+        .login-box {
+            position: relative;
+            /* top: 8rem; */
+            /* margin: auto; */
+            width: 26rem;
+            height: 400px;
+            background: #FFF;
+            border-radius: 2px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 40px;
+            /* width: 300px; */
+            height: 400px;
+        }
+
+        h1 {
+            margin: 0 0 20px 0;
+            font-weight: 300;
+            font-size: 28px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            display: block;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding: 4px;
+            width: 17rem;
+            height: 32px;
+            border: none;
+            border-bottom: 1px solid #AAA;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            transition: 0.2s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-bottom: 2px solid #16a085;
+            color: #16a085;
+            transition: 0.2s ease;
+        }
+
+        input[type="submit"] {
+            margin-top: 28px;
+            width: 120px;
+            height: 32px;
+            background: #16a085;
+            border: none;
+            border-radius: 2px;
+            color: #FFF;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: 0.1s ease;
+            cursor: pointer;
+            margin-bottom: 2rem;
+        }
+
+        input[type="submit"]:hover,
+        input[type="submit"]:focus {
+            opacity: 0.8;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            transition: 0.1s ease;
+        }
+
+        input[type="submit"]:active {
+            opacity: 1;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            transition: 0.1s ease;
+        }
+
+        .or {
+            position: absolute;
+            top: 180px;
+            left: 280px;
+            width: 40px;
+            height: 40px;
+            background: #DDD;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            box-sizing: border-box;
+            padding: 40px;
+            width: 300px;
+            height: 400px;
+            background: url('https://goo.gl/YbktSj');
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 2px 2px 0;
+        }
+
+
+
+
+
+
+        button.social-signin:hover,
+        button.social-signin:focus {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            transition: 0.2s ease;
+        }
+
+
+        #loge {
+            display: none;
+            cursor: pointer;
+
+        }
+
+        #sign {
+            cursor: pointer;
+        }
+
+        .left .signmessage {
+            margin-top: 2rem;
+        }
+
+        .login-box .message {
+            width: 6rem;
+        }
+
+        .formal {
+            background: none;
+        }
+
+        .jk .png {
+            width: 40%;
+            height: 50%;
+            /* margin-left: 24rem; */
+            margin: auto;
+        }
+
+        .jk {
+            display: flex;
+            background-image: url("/images/Join\ us.png");
+            height: 40rem;
+            /* background-repeat: no-repeat; */
+            background-size: contain;
+        }
+
+        .links {
+            margin: auto;
+            margin-top: 2rem;
+
+        }
+
+        .links a li {
+            font-size: 2rem;
+        }
+
+        #foot {
+            position: absolute;
+            left: 0;
+        }
+
+
+
+
+
+
+
+
+
+
+        @media(max-width:876px) {
+            #boss {
+                /* position: relative; */
+                top: -9rem;
+            }
+
+            .grida {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .row {
+                margin: auto;
+            }
+
+            .footer .insta {
+                margin: 0rem 0rem;
+                margin: auto;
+            }
+
+
+
+            .footer {
+                height: 171vh;
+                font-size: 1.7rem;
+            }
+
+            body {
+                background: none;
+            }
+
+            .jk {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+
+        }
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+    <section class="header ">
+
+
+        <nav class="nava">
+            <div class="navbtn">
+
+                <i class="fa-solid fa-3x fa-bars opene " onclick="myfun()"></i>
+                <i class="fa-solid fa-3x fa-close close"></i>
+            </div>
+            <img id="image" src="/images/pngkey.com-web-development-images-png-2496182.png" alt="" srcset="">
+
+            <ul id="boss">
+                <li class="main " id="homa" onclick="ho()">Home<span><i id="right1"
+                            class="fa-solid fa-angle-right"></i></span>
+                    <ul class="open">
+                        <li><a href="/index.html#popular">Popular Posts</a></li>
+                        <li class="ok"><a href="/index.html#follow">Follow us</a></li>
+                        <li class="ok"><a href="/index.html#technology">Technology</a></li>
+                        <li class="ok"><a href="/index.html#slidesection">Featured Posts</a></li>
+                        <li class="cota" onclick="op()">Categories +
+                            <ul class="oye">
+                                <li><a href="/post3.html">Web development</a></li>
+                                <li><a href="/post6.html">SEO</a></li>
+                                <li><a href="/host.html">Hosting</a></li>
+                                <!-- <li><a href="">Hosting</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main" id="mo">More<span><i id="right2" class="fa-solid fa-angle-right"></i></span>
+                    <ul>
+                        <li><a href="/ht.html">HTML</a></li>
+                        <li><a href="/css.html">CSS</a></li>
+                        <li><a href="/js.html">Javascript</a></li>
+
+                    </ul>
+                </li>
+                <li class="main"> <a href="/contact.html">Contact us</a> <span class="use1"><i id="right3"
+                            class="fa-solid fa-angle-right"></i></span></li>
+                <li class="main"> <a href="/about.html">About us</a> <span class="use1"><i id="right4"
+                            class="fa-solid fa-angle-right"></i></span></li>
+                <li class="main"> <a href="/privacypolicy.html">Privacy Policy</a> <span class="use1"><i id="right5"
+                            class="fa-solid fa-angle-right"></i></span></li>
+            </ul>
+            <div class="socialicons">
+                <a href="https://m.facebook.com/tanishq.palkhe.14"><i class="fa-brands fa-2x fa-2x fa-facebook"></i></a>
+                <a href="https://twitter.com/Tanishq3657"><i class="fa-brands fa-2x fa-2x fa-twitter"></i></a>
+                <a href="https://instagram.com/tanishqpalkhe007"><i class="fa-brands  fa-2x fa-2x fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/tanishq-palkhe-5a52a6217"><i
+                        class="fa-brands fa-2x fa-linkedin"></i></a>
+            </div>
+
+
+
+        </nav>
+    </section>
+    <section class="imgcontact sid">
+        <h3>Register Now </h3>
+    </section>
+    <div class="jk sid">
+
+        <div class="login-box" id="sign">
+            <div class="left">
+                <h1>Register Now</h1>
+                <input type="text" id="username" name="username" placeholder="username">
+                <input type="text" id="email" name="email" placeholder="E-mail" onkeyup= />
+                <input type="password" id="password" name="password" placeholder="Password" />
+
+                <input type="submit" id='signup' name="signup_submit" value="submit" />
+                <!-- <div class="meassage" onclick="singine()"> Already have account login</div> -->
+
+            </div>
+
+
+
+
+        </div>
+        <!-- <img src="/images/Join us.png" alt="" class="png"> -->
+    </div>
+
+    <script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
+    <script>
+
+        boss = document.querySelector("#boss")
+        openaa = document.querySelector(".opene")
+        header = document.querySelector(".header")
+        // console.log(openaa);
+
+
+        function myfun() {
+
+            if (header.classList.toggle("hnav")) {
+                boss.style.display = "block"
+            }
+
+            else {
+                boss.style.display = "none"
+            }
+
+
+
+        }
+        function show() {
+            commentbelow = document.querySelector("#commentbelow")
+            console.log(commentbelow.value);
+            boxa = document.querySelector(".boxa")
+            console.log(boxa);
+            boxa.style.display = "block"
+            if (boxa.innerText = commentbelow.value) {
+                commentbelow.value = ""
+            }
+            else if (commentbelow.value == "") {
+                boxa.style.display = "none"
+            }
+
+
+
+        }
+        const herosection = document.querySelector(".header")
+
+        const footele = document.querySelector(".footer")
+        const scrollTotop = document.createElement("div")
+        scrollTotop.classList.add("scrolltop-style")
+
+
+        scrollTotop.innerHTML = `<i class="fa-solid fa-2x fa-arrow-up-long scroll-top"></i>`
+        footele.after(scrollTotop)
+
+        const scrolltop = () => {
+            herosection.scrollIntoView({ behavior: "smooth" })
+        }
+        scrollTotop.addEventListener("click", scrolltop)
+
+    </script>
+
+</body>
+<script type="module">
+    // console.log("ki");
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAB-bIBBSgrKImSt-i9pjtQJDlHsPk6rQ8",
+        authDomain: "login-form-6dab9.firebaseapp.com",
+        projectId: "login-form-6dab9",
+        storageBucket: "login-form-6dab9.appspot.com",
+        messagingSenderId: "698737125205",
+        appId: "1:698737125205:web:20d6f3eeb2b5c9fa80b1dc"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app)
+    const auth = getAuth()
+    const signUp = document.getElementById("signup")
+    const login = document.getElementById("login")
+
+    signUp.addEventListener(("click"), () => {
+        var username = document.getElementById("username").value
+        var email = document.getElementById("email").value
+        var password = document.getElementById("password").value
+
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+
+                set(ref(database, "users/" + user.uid), {
+                    username: username,
+                    email: email
+                })
+                swal("Good", "Thanks for joining us", "success")
+                setTimeout(() => {
+
+                    window.location.href = "/index.html"
+                }, 4000);
+
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage)
+                // ..
+            });
+
+
+
+
+    })
+
+
+    login.addEventListener("click", (e) => {
+
+        // alert("ki")
+
+        var email = document.getElementById("email").value
+        console.log(password);
+        console.log(email);
+        var password = document.getElementById("password").value
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                const dt = new Date()
+                update(ref(database, "users/" + user.uid), {
+                    last_login: dt,
+
+                })
+                alert("user loged in")
+                setTimeout(() => {
+
+                    window.location.href = "/index.html"
+                }, 4000);
+
+
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage)
+            });
+
+
+    })
+
+    const user = firebase.auth().currentUser
+    if (user) {
+        // user is signed in, show user data
+        alert("welcome")
+    }
+    else {
+        // user is signed out, show sign-in form
+        alert("first do sign up")
+    }
+
+
+
+</script>
+
+
+
+
+<script src="https://kit.fontawesome.com/39aab1f952.js" crossorigin="anonymous"></script>
+<!-- <script src="/form2.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> -->
+
+
+<script>
+    boss = document.querySelector("#boss")
+    openaa = document.querySelector(".opene")
+    header = document.querySelector(".header")
+    console.log(openaa);
+
+    function myfun() {
+
+        if (header.classList.toggle("hnav")) {
+            boss.style.display = "block"
+        }
+
+        else {
+            boss.style.display = "none"
+        }
+
+
+
+    }
+    function singine() {
+        loge = document.getElementById("loge")
+        sign = document.getElementById("sign")
+        loge.style.display = "block"
+        sign.style.display = "none"
+    }
+    function logine() {
+        loge = document.getElementById("loge")
+        sign = document.getElementById("sign")
+        loge.style.display = "none"
+        sign.style.display = "block"
+    }
+    var someVarName = "value";
+    localStorage.setItem("someVarKey", someVarName);
+
+
+
+
+</script>
+
+</body>
+
+</html>

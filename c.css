@@ -1,0 +1,329 @@
+.nava {
+    margin-top: 0px;
+}
+
+
+.nava .main .open {
+    display: none;
+    position: absolute;
+    top: 7rem;
+    cursor: pointer;
+    background-color: white;
+    width: 15%;
+    box-shadow: 2px 3px 6px black;
+    z-index: 100;
+
+    /* left: -3rem; */
+
+}
+
+footer {
+    height: fit-content;
+    margin-top: 4rem;
+}
+
+.scrolltop-style {
+    position: fixed;
+    right: 5%;
+    bottom: 3%;
+}
+
+.scroll-top {
+    height: 5rem;
+    width: 5rem;
+    background-color: #8490ff;
+    display: inline-block;
+    padding: 1.4rem 1.8rem;
+    color: var(--heading);
+    cursor: pointer;
+    border: 2px solid var(--helper);
+    border-radius: 23px;
+}
+
+
+
+#mo ul {
+    display: none;
+    position: absolute;
+    top: 7rem;
+    cursor: pointer;
+    background-color: white;
+    width: 12%;
+    box-shadow: 2px 3px 2px black;
+    z-index: 100;
+}
+
+.imgcontact {
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/pen-4337524_1920.jpg");
+    /* background-size: cover; */
+    border-radius: 12px;
+    margin: 4rem 0rem;
+}
+
+.sid {
+    margin: 3rem 6rem;
+}
+
+h3 {
+    font-size: 3rem;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 0rem 3rem;
+}
+
+.sit {
+    margin: 3rem 17rem;
+}
+
+.contentpost h2 {
+    margin-top: 3rem;
+    text-align: left;
+    margin-left: 0px;
+    margin-bottom: 2rem;
+}
+
+.contentpost ol li {
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.contentpost h4 {
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contentpost p {
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.contentpost .aboutus {
+    margin: 4rem 0rem;
+
+    padding: 2rem;
+    font-size: 1.4rem;
+    /* border: 2px solid black; */
+
+    /* height: 30%; */
+}
+
+.contentpost .aboutus img {
+    width: 10rem;
+    height: 10rem;
+    display: block;
+    margin: auto;
+    border-radius: 8rem;
+    margin-bottom: -5rem;
+
+}
+.contentpost h3{
+    color: #8490ff;
+    margin: 3rem 0rem;
+}
+
+.contentpost .aboutus .aboutconta h6 {
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin: 1.6rem 0rem;
+
+}
+
+.contentpost .aboutconta {
+    background-color: #EFF0F4;
+    border-radius: 1.2rem;
+    padding-top: 9rem;
+    padding: 5rem;
+}
+
+.contentpost .aboutconta p {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#join {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.next {
+    display: flex;
+    gap: 23rem;
+    /* margin-top: 1rem; */
+}
+
+.next p {
+    font-size: 1.2rem;
+}
+
+.popularpost img {
+    width: 100%;
+    height: 20rem;
+    gap: 5rem;
+}
+
+#related {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment h4 {
+    font-size: 2rem;
+    margin: 2rem 0rem;
+}
+
+.boxa {
+    overflow-y: scroll;
+    width: 100%;
+    height: 10rem;
+    border: 2px solid black;
+    margin-top: 4rem;
+    display: none;
+    font-size: 1.4rem;
+    border-radius: 1.4rem;
+    padding: 1rem;
+    overflow-y: scroll;
+
+}
+
+.boxa::before {
+    content: "UNKNOWN: ";
+    padding: 0.6rem;
+
+}
+
+.sih {
+    margin: 3rem 2rem;
+}
+
+
+.comment #commentbelow {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    font-size: 1.3rem;
+    height: 50%;
+}
+
+.comment .btn {
+    margin-left: 2px;
+}
+
+.comment .btn1 {
+    width: 6rem;
+    border-radius: 1rem;
+    height: 3rem;
+    margin: 1rem 0rem;
+    background-color: violet;
+    color: #EFF0F4;
+
+}
+
+.contentpost ul li {
+    font-size: 2rem;
+    font: 2rem sans-serif;
+    margin: 2rem 0;
+}
+
+.contentpost img {
+    width: 100%;
+    height: 100%;
+}
+
+.links {
+    margin: auto;
+    margin-top: 2rem;
+
+}
+
+.links a li {
+    font-size: 2rem;
+}
+
+#foot {
+    position: absolute;
+    left: 0;
+}
+
+
+
+
+@media(max-width:876px) {
+    #boss {
+        /* position: relative; */
+        top: -9rem;
+    }
+
+    .grida {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sit {
+        margin: 3rem 2rem;
+    }
+
+    #foot {
+        position: relative;
+    }
+}
+
+@media(max-width:486px) {
+    .grida {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .popularpost img {
+        height: 26rem;
+    }
+
+    .next {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sid {
+        margin: 3rem 3rem;
+    }
+
+    .contentpost .aboutconta {
+        padding: 4rem;
+    }
+
+    .imgcontact h3 {
+        margin: 0rem;
+    }
+
+    .comment .btn1 {
+        width: 8rem;
+
+    }
+
+    .gr {
+        width: 50%;
+    }
+}
+
+@media(max-width:418px) {
+    .carr img {
+        width: 32%;
+        height: 72%;
+    }
+}
